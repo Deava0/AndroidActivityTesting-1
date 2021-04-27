@@ -122,7 +122,8 @@
                     android:background="@drawable/et_oval"
                     android:hint="Password"
                     android:paddingLeft="20dp"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:inputType="textPassword"/>
 
             </RelativeLayout>
 
@@ -135,7 +136,8 @@
                 android:layout_marginRight="80dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Enter"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:onClick="sendMessage"/>
 
 
         </RelativeLayout>
