@@ -29,8 +29,8 @@ android {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/androidx.cardview/cardview
     runtimeOnly group: 'androidx.cardview', name: 'cardview', version: '1.0.0'
+    implementation group: 'com.koushikdutta.ion', name: 'ion', version: '3.1.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
