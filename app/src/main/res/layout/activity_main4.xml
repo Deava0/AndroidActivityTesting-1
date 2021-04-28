@@ -1,0 +1,391 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circle"
+                        android:padding="10dp"
+                        android:src="@drawable/icons8_sign_document_32px"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvNewBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Modify Books"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/triangle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/linearTop"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:rotation="45"
+                    android:src="@drawable/square" />
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/rlBookPic"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/triangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                    android:outlineSpotShadowColor="@color/colorPrimary"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/ivbookPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/llchkISBN"
+                        android:layout_below="@id/rlBookPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlISBN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rlBookPic"
+                            android:paddingTop="5dp"
+                            android:layout_weight="0.5">
+
+                            <ImageView
+                                android:id="@+id/ivISBNIcon"
+                                android:layout_width="50dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/iv_oval"
+                                android:padding="8dp"
+                                android:src="@drawable/icons8_barcode_scanner_32px"
+                                app:tint="@color/white" />
+
+                            <EditText
+                                android:id="@+id/etISBN"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/ivISBNIcon"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/ivISBNIcon"
+                                android:background="@drawable/et_oval"
+                                android:hint="ISBN"
+                                android:paddingLeft="20dp"
+                                android:inputType="number"
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlCheckBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:paddingLeft="15dp">
+
+                            <Button
+                                android:id="@+id/bCheckISBN"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Check"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlBookName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llchkISBN"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/ivBookName"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/book_list"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivBookName"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivBookName"
+                        android:background="@drawable/et_oval"
+                        android:hint="Book Title"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAuthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlBookName"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/ivAuthor"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/icons8_user_typing_using_typewriter_32px"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivAuthor"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivAuthor"
+                        android:background="@drawable/et_oval"
+                        android:hint="Author"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llQtPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlAuthor"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlQt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="15dp">
+
+                        <ImageView
+                            android:id="@+id/ivQt"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/iv_oval"
+                            android:padding="8dp"
+                            android:src="@drawable/icons8_estimates_32px"
+                            app:tint="@color/white" />
+
+                        <EditText
+                            android:id="@+id/etQt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/ivQt"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="-2dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_toRightOf="@id/ivQt"
+                            android:background="@drawable/et_oval"
+                            android:hint="Qt"
+                            android:inputType="number"
+                            android:paddingLeft="20dp"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/etQt"
+                        android:layout_weight="0.5"
+                        android:paddingLeft="15dp">
+
+                        <ImageView
+                            android:id="@+id/ivPrice"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/iv_oval"
+                            android:padding="8dp"
+                            android:src="@drawable/icons8_cheap_2_32px"
+                            app:tint="@color/white" />
+
+                        <EditText
+                            android:id="@+id/etPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/ivPrice"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/ivPrice"
+                            android:background="@drawable/et_oval"
+                            android:hint="Price"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="20dp"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llQtPrice"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivAbout"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/icons8_info_32px"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivAbout"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivAbout"
+                        android:background="@drawable/et_oval"
+                        android:gravity="top"
+                        android:hint="About"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="20dp"
+                        android:singleLine="false"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBtns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlAbout"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="15dp">
+
+                        <Button
+                            android:id="@+id/bUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Update"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingLeft="15dp">
+
+                        <Button
+                            android:id="@+id/bDelete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Delete"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

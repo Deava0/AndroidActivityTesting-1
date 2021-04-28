@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 Boolean result = book_prot_db.check_UN_PW(un, pw);
                 if (result == true) {
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                   Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                   Intent intent = new Intent(MainActivity.this, MainActivity4.class);
                    startActivity(intent);
 
                 } else {

@@ -72,6 +72,8 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
+
+
     public Boolean insertUser(String username, String password) throws SQLException{
         SQLiteDatabase book_prot_db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
