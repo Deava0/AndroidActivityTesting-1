@@ -7,14 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
+import com.ahs.testingactivities.Drawer_Activity;
 
 public class MainActivity extends AppCompatActivity {
     EditText etUN, etPW;
     //Button bEnter;
 
     DBHelper book_prot_db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 Boolean result = book_prot_db.check_UN_PW(un, pw);
                 if (result == true) {
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                   Intent intent = new Intent(MainActivity.this, MainActivity4.class);
+
+                  /*  Drawer_Activity da = new Drawer_Activity();
+                    da.UserName=un;
+                    */
+
+                   Intent intent = new Intent(MainActivity.this, Drawer_Activity.class);
                    startActivity(intent);
 
                 } else {
