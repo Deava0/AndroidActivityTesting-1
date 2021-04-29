@@ -88,7 +88,7 @@ public class BlankFragment2 extends Fragment implements View.OnClickListener {
                     //bitmap->img->byte
                     Bitmap bitmap = ((BitmapDrawable) ivbookPic1.getDrawable()).getBitmap();
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 4, baos);//quality ???
                     byte[] cover = baos.toByteArray();
 
 

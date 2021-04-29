@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp">
+            <ImageView
+                android:id="@+id/ivThumbnail"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvBookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:text="Title"
+                    android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/tvIsbn"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tvBookName"
+                    android:layout_marginTop="0dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="ISBN"
+                    android:textSize="17dp"  />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvBookAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/black"
+                android:text="Author"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lvQt"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Qt"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/lvPrice"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_toRightOf="@id/lvQt"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Price"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

@@ -53,7 +53,6 @@ public class Drawer_Activity extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Intent intent;
         switch (item.getItemId()) {
             case R.id.nav_addBook: {
 
@@ -64,6 +63,12 @@ public class Drawer_Activity extends AppCompatActivity implements NavigationView
             case R.id.nav_ModifyBook: {
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag_Cont, new BlankFragment()).commit();
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            }
+            case R.id.nav_BookList: {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_Cont, new BlankFragment3()).commit();
                 drawer.closeDrawer(GravityCompat.START);
                 break;
             }
