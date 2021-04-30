@@ -1,7 +1,5 @@
 package com.ahs.testingactivities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -15,12 +13,19 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity4 extends AppCompatActivity {
 
     EditText etISBN, etTitle, etAuthor, etQt, etPrice, etAbout;
-    Button bUpdate,bDelete, bCheckISBN;
+    Button bUpdate, bDelete, bCheckISBN;
     ImageView ivbookPic;
     DBHelper book_prot_db;
+
+    public static void setImageViewWithByteArray(ImageView view, byte[] data) {
+        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+        view.setImageBitmap(bitmap);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,21 +55,15 @@ public class MainActivity4 extends AppCompatActivity {
         });
 
 
-
     }
 
-    public static void setImageViewWithByteArray(ImageView view, byte[] data) {
-        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-        view.setImageBitmap(bitmap);
-    }
-
-    public void  selectBooksByISBN(String isbn)throws SQLException {
-        SQLiteDatabase book_prot_db = getApplicationContext().openOrCreateDatabase("book_prot_db.db", Context.MODE_PRIVATE,null);
+    public void selectBooksByISBN(String isbn) throws SQLException {
+        SQLiteDatabase book_prot_db = getApplicationContext().openOrCreateDatabase("book_prot_db.db", Context.MODE_PRIVATE, null);
         Cursor cursor = book_prot_db.rawQuery("select * from books where isbn =?", new String[]{isbn});
         if (cursor.getCount() > 0) {
 
             StringBuffer buffer = new StringBuffer();
-            while (cursor.moveToNext()){
+            while (cursor.moveToNext()) {
                 Toast.makeText(this, "Record Found", Toast.LENGTH_SHORT).show();
 
                 etTitle.setText(cursor.getString(1));
@@ -76,12 +75,11 @@ public class MainActivity4 extends AppCompatActivity {
             }
 
 
-            book_prot_db.close();
             cursor.close();
         } else {
-            book_prot_db.close();
+
             cursor.close();
-            Toast.makeText(this, "No record found for ISBN="+isbn, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No record found for ISBN=" + isbn, Toast.LENGTH_SHORT).show();
         }
     }
 

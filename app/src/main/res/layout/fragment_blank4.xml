@@ -40,7 +40,7 @@
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circle"
                         android:padding="10dp"
-                        android:src="@drawable/icons8_books_32px"
+                        android:src="@drawable/icons8_trolley_32px"
                         app:tint="@color/white" />
 
                     <TextView
@@ -50,7 +50,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="20dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Book List"
+                        android:text="Orders List"
                         android:textColor="@color/white"
                         android:textSize="22dp" />
 
@@ -68,7 +68,7 @@
 
 
                 <ListView
-                    android:id="@+id/lvBookList"
+                    android:id="@+id/lvOrderList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/triangle"

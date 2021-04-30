@@ -93,68 +93,67 @@
                 </androidx.cardview.widget.CardView>
 
 
-                    <LinearLayout
-                        android:id="@+id/llchkISBN"
-                        android:layout_below="@id/rlBookPic"
+                <LinearLayout
+                    android:id="@+id/llchkISBN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlBookPic"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlISBN"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginRight="30dp"
-                        android:orientation="horizontal">
+                        android:layout_below="@id/rlBookPic"
+                        android:layout_weight="0.5"
+                        android:paddingTop="5dp">
 
-                        <RelativeLayout
-                            android:id="@+id/rlISBN"
+                        <ImageView
+                            android:id="@+id/ivISBNIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/iv_oval"
+                            android:padding="8dp"
+                            android:src="@drawable/icons8_barcode_scanner_32px"
+                            app:tint="@color/white" />
+
+                        <EditText
+                            android:id="@+id/etISBN"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/rlBookPic"
-                            android:paddingTop="5dp"
-                            android:layout_weight="0.5">
+                            android:layout_alignBottom="@id/ivISBNIcon"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/ivISBNIcon"
+                            android:background="@drawable/et_oval"
+                            android:hint="ISBN"
+                            android:inputType="number"
+                            android:paddingLeft="20dp"
+                            android:textSize="15dp" />
 
-                            <ImageView
-                                android:id="@+id/ivISBNIcon"
-                                android:layout_width="50dp"
-                                android:layout_height="40dp"
-                                android:background="@drawable/iv_oval"
-                                android:padding="8dp"
-                                android:src="@drawable/icons8_barcode_scanner_32px"
-                                app:tint="@color/white" />
+                    </RelativeLayout>
 
-                            <EditText
-                                android:id="@+id/etISBN"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/ivISBNIcon"
-                                android:layout_alignParentTop="true"
-                                android:layout_toRightOf="@id/ivISBNIcon"
-                                android:background="@drawable/et_oval"
-                                android:hint="ISBN"
-                                android:paddingLeft="20dp"
-                                android:inputType="number"
-                                android:textSize="15dp" />
+                    <RelativeLayout
+                        android:id="@+id/rlCheckBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:paddingLeft="15dp">
 
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/rlCheckBtn"
+                        <Button
+                            android:id="@+id/bCheckISBN"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.9"
-                            android:paddingLeft="15dp">
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingBottom="10dp"
+                            android:text="Check"
+                            android:textColor="@color/white" />
 
-                            <Button
-                                android:id="@+id/bCheckISBN"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:fontFamily="sans-serif-medium"
-                                android:text="Check"
-                                android:paddingBottom="10dp"
-                                android:textColor="@color/white" />
+                    </RelativeLayout>
 
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
+                </LinearLayout>
 
 
                 <RelativeLayout

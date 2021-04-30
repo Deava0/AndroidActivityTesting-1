@@ -1,10 +1,7 @@
 package com.ahs.testingactivities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,9 +12,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
 public class Drawer_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public String UserName = "Should be a username";
     private DrawerLayout drawer;
-
-    public String UserName="Should be a username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +65,18 @@ public class Drawer_Activity extends AppCompatActivity implements NavigationView
             case R.id.nav_BookList: {
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag_Cont, new BlankFragment3()).commit();
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            }
+            case R.id.nav_NewOrders: {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_Cont, new BlankFragment5()).commit();
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            }
+            case R.id.nav_OrderList: {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_Cont, new BlankFragment4()).commit();
                 drawer.closeDrawer(GravityCompat.START);
                 break;
             }

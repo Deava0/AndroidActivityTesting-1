@@ -28,164 +28,163 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/linearTop"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circle"
+                        android:padding="10dp"
+                        android:src="@drawable/icons8_sign_document_32px"
+                        app:tint="@color/white" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Register"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/circle"
-                    android:padding="10dp"
-                    android:src="@drawable/icons8_sign_document_32px"
-                    app:tint="@color/white" />
+                    android:id="@+id/triangle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/linearTop"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:rotation="45"
+                    android:src="@drawable/square" />
 
-                <TextView
-
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlUN"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_below="@id/triangle"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/ivUserIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/icons8_user_120px"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etUN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivUserIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivUserIcon"
+                        android:background="@drawable/et_oval"
+                        android:hint="User Name"
+                        android:paddingLeft="20dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlPW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlUN"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/ivPWIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/icons8_password_120px_1"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etPW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivPWIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivPWIcon"
+                        android:background="@drawable/et_oval"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlPW2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlPW"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/ivPWIcon2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/iv_oval"
+                        android:padding="8dp"
+                        android:src="@drawable/icons8_password_120px_1"
+                        app:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etConfirmPW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivPWIcon2"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/ivPWIcon2"
+                        android:background="@drawable/et_oval"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/bEnter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlPW2"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="80dp"
                     android:fontFamily="sans-serif-medium"
+                    android:onClick="Register"
                     android:text="Register"
-                    android:textColor="@color/white"
-                    android:textSize="22dp" />
+                    android:textColor="@color/white" />
 
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/triangle"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_below="@id/linearTop"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-10dp"
-                android:rotation="45"
-                android:src="@drawable/square" />
-
-            <RelativeLayout
-                android:id="@+id/rlUN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/triangle"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="150dp"
-                android:layout_marginRight="30dp">
-
-                <ImageView
-                    android:id="@+id/ivUserIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/iv_oval"
-                    android:padding="8dp"
-                    android:src="@drawable/icons8_user_120px"
-                    app:tint="@color/white" />
-
-                <EditText
-                    android:id="@+id/etUN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/ivUserIcon"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/ivUserIcon"
-                    android:background="@drawable/et_oval"
-                    android:hint="User Name"
-                    android:paddingLeft="20dp"
-                    android:textSize="15dp" />
 
             </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rlPW"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rlUN"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp">
-
-                <ImageView
-                    android:id="@+id/ivPWIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/iv_oval"
-                    android:padding="8dp"
-                    android:src="@drawable/icons8_password_120px_1"
-                    app:tint="@color/white" />
-
-                <EditText
-                    android:id="@+id/etPW"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/ivPWIcon"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/ivPWIcon"
-                    android:background="@drawable/et_oval"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="20dp"
-                    android:textSize="15dp" />
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/rlPW2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rlPW"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp">
-
-                <ImageView
-                    android:id="@+id/ivPWIcon2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/iv_oval"
-                    android:padding="8dp"
-                    android:src="@drawable/icons8_password_120px_1"
-                    app:tint="@color/white" />
-
-                <EditText
-                    android:id="@+id/etConfirmPW"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/ivPWIcon2"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/ivPWIcon2"
-                    android:background="@drawable/et_oval"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="20dp"
-                    android:textSize="15dp" />
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/bEnter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rlPW2"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="80dp"
-                android:fontFamily="sans-serif-medium"
-                android:onClick="Register"
-                android:text="Register"
-                android:textColor="@color/white" />
-
-
-
-
-        </RelativeLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

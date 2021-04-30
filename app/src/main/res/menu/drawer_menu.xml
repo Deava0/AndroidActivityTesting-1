@@ -15,7 +15,16 @@
             android:id="@+id/nav_BookList"
             android:icon="@drawable/icons8_books_32px"
             android:title="Book List" />
+        <item
+            android:id="@+id/nav_NewOrders"
+            android:icon="@drawable/icons8_add_shopping_cart_32px"
+            android:title="Create Order" />
+        <item
+            android:id="@+id/nav_OrderList"
+            android:icon="@drawable/icons8_trolley_32px"
+            android:title="Order List" />
     </group>
+
     <item android:title="Announce">
         <menu>
             <item
